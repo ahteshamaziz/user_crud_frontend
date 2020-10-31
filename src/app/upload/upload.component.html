@@ -1,0 +1,35 @@
+
+    <div class="container" style="text-align: center;">
+       
+       
+
+        <div class="row" style="width: 100%;text-align: center;">  
+         <div class="col-sm-4"></div>
+         <div class="col-sm-4">
+         <!-- <input type="file" name="image" ng2FileSelect [uploader]="uploader1" multiple accept="image/*" style="font-size:100%;margin-left: 36%;margin-top: 50%;"/> -->
+         
+         <span style="color:red;" *ngIf="message">{{message}}</span>
+         <input #file type="file" accept='image/*' (change)="preview(file.files)"  name="image" ng2FileSelect [uploader]="uploader1" style="margin-top: 15%;"/>
+         <img [src]="imgURL" height="200" *ngIf="imgURL">
+         
+         <br>
+         <input type="text" style="margin-top: 1%;"  [(ngModel)]="First_name" name="First_name"  class="form-control" id="First_name" placeholder="First name">
+         <br>
+         <input type="text" style="margin-top: 1%;"  [(ngModel)]="Last_name" name="Last_name"  class="form-control" id="Last_name" placeholder="Last name">
+         <br>
+         <input type="number" style="margin-top: 1%;"  [(ngModel)]="Phone_number" name="Phone_number"  class="form-control" id="Phone_number" placeholder="Phone number">
+         <br>
+         <input type="email" style="margin-top: 1%;"  [(ngModel)]="Email" name="Email"  class="form-control" id="Email" placeholder="Email">
+         <br>
+         <button type="button" class="btn btn-light shadow p-2 mb-3 bg-white rounded" style="border-bottom: 3px solid #656565;width: 30%;margin-top: 5%;" (click)="addimage()">Submit</button>  
+         </div>
+         <div class="col-sm-4"></div>
+ 
+        </div>
+        
+       
+            
+           
+    
+     </div>
+     

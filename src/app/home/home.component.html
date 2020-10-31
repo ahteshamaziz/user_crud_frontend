@@ -1,0 +1,37 @@
+<div style="text-align: center; margin-top: 3%;">
+    <button type="button" (click)="upload()" class="btn btn-secondary">Upload</button>
+</div>
+<br>
+<div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" style="width: 10%;">Id</th>
+            <th scope="col"  style="width: 10%;">First Name</th>
+            <th scope="col"  style="width: 10%;">Last Name</th>
+            <th scope="col"  style="width: 10%;">Phone</th>
+            <th scope="col"  style="width: 10%;">Email</th>
+            <th scope="col"  style="width: 30%;">Image</th>
+            <th scope="col"  style="width: 10%;">Edit</th>
+            <th scope="col"  style="width: 10%;">Delete</th>
+
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let da of data; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{da.First_name}}</td>
+            <td>{{da.Last_name}}</td>
+            <td>{{da.Phone_number}}</td>
+            <td>{{da.Email}}</td>
+            <td><img src="{{da.Profile}}" alt="" style="width: 50%;"></td>
+            <td><button type="button" (click)="edit(da._id)" class="btn btn-warning">Edit</button></td>
+            <td> <button type="button"  (click)="del(da._id)" class="btn btn-danger">Delete</button></td>
+
+            
+          </tr>
+         
+        </tbody>
+      </table>
+</div>
